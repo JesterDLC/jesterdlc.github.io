@@ -57,7 +57,7 @@
             background-image: 
                 linear-gradient(rgba(0, 243, 255, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 243, 255, 0.03) 1px, transparent 1px);
-            background-size: 50px 50px;
+            background-size: clamp(30px, 5vw, 50px) clamp(30px, 5vw, 50px);
             z-index: -2;
             pointer-events: none;
             mask-image: radial-gradient(circle at center, black, transparent 80%);
@@ -79,7 +79,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 25px 60px;
+            padding: clamp(15px, 2vw, 25px) clamp(20px, 5vw, 60px);
             background: rgba(3, 3, 5, 0.6);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -92,9 +92,9 @@
 
         .logo {
             font-family: 'Syncopate', sans-serif;
-            font-size: 1.6rem;
+            font-size: clamp(1.2rem, 2vw, 1.6rem);
             font-weight: 700;
-            letter-spacing: 3px;
+            letter-spacing: clamp(1px, 0.5vw, 3px);
             color: var(--text-main);
             text-transform: uppercase;
             text-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
@@ -106,14 +106,14 @@
 
         .nav-links {
             display: flex;
-            gap: 40px;
+            gap: clamp(20px, 3vw, 40px);
             align-items: center;
         }
 
         .nav-links a {
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 1vw, 0.85rem);
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -148,27 +148,27 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 80px clamp(15px, 4vw, 40px) 20px;
         }
 
         .hero-badge {
-            padding: 6px 16px;
+            padding: clamp(4px, 0.5vw, 6px) clamp(12px, 1.5vw, 16px);
             border: 1px solid var(--border);
             border-radius: 50px;
-            font-size: 0.8rem;
+            font-size: clamp(0.7rem, 1vw, 0.8rem);
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 25px;
+            margin-bottom: clamp(15px, 2vw, 25px);
             background: rgba(0, 243, 255, 0.05);
             backdrop-filter: blur(5px);
         }
 
         .hero h1 {
             font-family: 'Syncopate', sans-serif;
-            font-size: 6rem;
+            font-size: clamp(2.5rem, 8vw, 6rem);
             text-transform: uppercase;
-            margin-bottom: 25px;
+            margin-bottom: clamp(15px, 2vw, 25px);
             line-height: 1;
             background: linear-gradient(180deg, #fff 20%, var(--primary) 100%);
             -webkit-background-clip: text;
@@ -183,28 +183,29 @@
         }
 
         .hero p {
-            font-size: 1.15rem;
+            font-size: clamp(1rem, 1.5vw, 1.15rem);
             color: var(--text-muted);
             max-width: 700px;
-            margin-bottom: 45px;
+            margin-bottom: clamp(30px, 4vw, 45px);
             font-weight: 400;
         }
 
         .hero-buttons {
             display: flex;
-            gap: 20px;
+            gap: clamp(10px, 1.5vw, 20px);
             align-items: center;
             flex-wrap: wrap;
             justify-content: center;
+            width: 100%;
         }
 
         .btn-primary {
-            padding: 18px 45px;
+            padding: clamp(12px, 1.5vw, 18px) clamp(20px, 3vw, 45px);
             background: var(--primary);
             color: #000;
             border: none;
             border-radius: 8px;
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 1.2vw, 1rem);
             font-weight: 800;
             cursor: pointer;
             transition: 0.3s;
@@ -224,15 +225,15 @@
         .community-btn {
             display: inline-flex;
             align-items: center;
-            gap: 12px;
-            padding: 18px 40px;
+            gap: 10px;
+            padding: clamp(12px, 1.5vw, 18px) clamp(20px, 3vw, 40px);
             background: rgba(255, 0, 85, 0.05);
             color: var(--secondary);
             border: 1px solid rgba(255, 0, 85, 0.5);
             border-radius: 8px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: clamp(0.85rem, 1.2vw, 1rem);
             transition: 0.3s;
             text-transform: uppercase;
             letter-spacing: 1px;
@@ -248,12 +249,13 @@
         .stats {
             display: flex;
             justify-content: center;
-            gap: 100px;
-            padding: 50px 0;
+            gap: clamp(30px, 6vw, 100px);
+            padding: clamp(30px, 4vw, 50px) clamp(15px, 3vw, 20px);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             background: rgba(3, 3, 5, 0.4);
             backdrop-filter: blur(20px);
+            flex-wrap: wrap;
         }
 
         .stat-item {
@@ -262,7 +264,7 @@
 
         .stat-val {
             font-family: 'Syncopate', sans-serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             font-weight: 700;
             color: #fff;
             text-shadow: 0 0 20px rgba(0, 243, 255, 0.4);
@@ -270,7 +272,7 @@
         }
 
         .stat-label {
-            font-size: 0.85rem;
+            font-size: clamp(0.7rem, 1vw, 0.85rem);
             color: var(--text-muted);
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -278,16 +280,16 @@
         }
 
         .features {
-            padding: 120px 10%;
+            padding: clamp(60px, 10vw, 120px) clamp(20px, 10vw, 10%);
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+            gap: clamp(15px, 2vw, 30px);
         }
 
         .feature-card {
             background: linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0) 100%);
             border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 45px;
+            padding: clamp(25px, 4vw, 45px);
             border-radius: 16px;
             backdrop-filter: blur(15px);
             transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -319,8 +321,8 @@
 
         .feature-card h3 {
             font-family: 'Syncopate', sans-serif;
-            font-size: 1.4rem;
-            margin-bottom: 20px;
+            font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+            margin-bottom: clamp(15px, 2vw, 20px);
             color: #fff;
             display: flex;
             align-items: center;
@@ -335,52 +337,51 @@
             background: var(--primary);
             border-radius: 50%;
             box-shadow: 0 0 10px var(--primary);
+            flex-shrink: 0;
         }
 
         .feature-card p {
             color: var(--text-muted);
-            font-size: 1rem;
+            font-size: clamp(0.9rem, 1vw, 1rem);
             line-height: 1.7;
         }
 
         .pricing-section {
-            padding: 100px 20px;
+            padding: clamp(60px, 8vw, 100px) clamp(15px, 3vw, 20px);
             text-align: center;
             position: relative;
         }
 
-        .pricing-section h2 {
+        .pricing-section h2, .buy-section h2 {
             font-family: 'Syncopate', sans-serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 4vw, 3rem);
             color: #fff;
-            margin-bottom: 60px;
+            margin-bottom: clamp(30px, 4vw, 60px);
             text-transform: uppercase;
         }
 
         .pricing-grid {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+            gap: clamp(15px, 2vw, 20px);
             max-width: 1400px;
             margin: 0 auto;
+            justify-content: center;
         }
 
         .price-card {
             background: var(--glass);
             border: 1px solid var(--border);
-            padding: 40px 30px;
+            padding: clamp(25px, 3vw, 40px) clamp(15px, 2vw, 30px);
             border-radius: 16px;
             backdrop-filter: blur(10px);
-            flex: 1;
-            min-width: 220px;
-            max-width: 260px;
             transition: 0.3s;
             display: flex;
             flex-direction: column;
             align-items: center;
             position: relative;
             overflow: hidden;
+            height: 100%;
         }
 
         .price-card:hover {
@@ -403,16 +404,16 @@
         }
 
         .price-card h3 {
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
             color: var(--primary);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 15px;
+            margin-bottom: clamp(10px, 1.5vw, 15px);
         }
 
         .price-amount {
             font-family: 'Syncopate', sans-serif;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 2.5vw, 2.5rem);
             font-weight: 700;
             color: #fff;
             margin-bottom: 10px;
@@ -421,20 +422,20 @@
 
         .price-period {
             color: var(--text-muted);
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 1vw, 0.9rem);
             text-transform: uppercase;
             letter-spacing: 1px;
-            margin-bottom: 25px;
+            margin-bottom: clamp(15px, 2vw, 25px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 20px;
+            padding-bottom: clamp(15px, 2vw, 20px);
             width: 100%;
         }
 
         .price-desc {
-            font-size: 0.85rem;
+            font-size: clamp(0.75rem, 0.9vw, 0.85rem);
             color: var(--text-muted);
             line-height: 1.4;
-            margin-bottom: 25px;
+            margin-bottom: clamp(20px, 2.5vw, 25px);
             flex-grow: 1;
         }
 
@@ -446,26 +447,17 @@
         }
 
         .buy-section {
-            padding: 80px 20px;
+            padding: clamp(60px, 8vw, 80px) clamp(15px, 3vw, 20px);
             text-align: center;
             background: rgba(0, 0, 0, 0.4);
             border-top: 1px solid rgba(255, 255, 255, 0.05);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .buy-section h2 {
-            font-family: 'Syncopate', sans-serif;
-            font-size: 2.5rem;
-            color: #fff;
-            margin-bottom: 40px;
-            text-transform: uppercase;
-        }
-
         .buy-container {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+            gap: clamp(15px, 3vw, 30px);
             max-width: 1000px;
             margin: 0 auto;
         }
@@ -473,10 +465,9 @@
         .buy-card {
             background: var(--glass);
             border: 1px solid var(--border);
-            padding: 30px 40px;
+            padding: clamp(20px, 3vw, 30px) clamp(20px, 4vw, 40px);
             border-radius: 12px;
             backdrop-filter: blur(10px);
-            min-width: 300px;
             transition: 0.3s;
         }
 
@@ -487,14 +478,14 @@
 
         .buy-card h4 {
             color: var(--primary);
-            font-size: 1.2rem;
+            font-size: clamp(1rem, 1.2vw, 1.2rem);
             margin-bottom: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
         .buy-card p {
-            font-size: 1.1rem;
+            font-size: clamp(1rem, 1.1vw, 1.1rem);
             color: var(--text-main);
             font-weight: 600;
         }
@@ -502,30 +493,21 @@
         .buy-card span {
             color: var(--text-muted);
             font-weight: 400;
-            font-size: 0.9rem;
+            font-size: clamp(0.8rem, 0.9vw, 0.9rem);
             display: block;
             margin-top: 5px;
         }
 
         footer {
-            padding: 40px 20px;
+            padding: 40px clamp(15px, 3vw, 20px);
             text-align: center;
         }
 
-        @media (max-width: 1024px) {
-            .hero h1 { font-size: 4rem; }
-            .stats { gap: 50px; flex-wrap: wrap; }
-            .features { grid-template-columns: 1fr; padding: 80px 5%; }
-            .pricing-section h2 { font-size: 2.5rem; }
-        }
-
+        /* Only for hiding nav-links on very small screens */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.8rem; }
-            nav { padding: 15px 20px; }
-            .nav-links { display: none; }
-            .btn-primary, .community-btn { width: 100%; text-align: center; justify-content: center; }
-            .price-card { max-width: 100%; width: 100%; }
-            .price-card.active { transform: translateY(0) scale(1); }
+            .nav-links {
+                display: none;
+            }
         }
     </style>
 </head>
